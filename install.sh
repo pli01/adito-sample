@@ -8,16 +8,14 @@
 test -f /opt/adito-0.9.1/conf/wrapper.conf && exit 0
 test -d /opt/adito-0.9.1 && exit 0
 
-apt-get install ant zip unzip default-jdk default-jre curl apache2
+DEBIAN_FRONTEND=noninteractive apt-get -y -q apt-get install ant zip unzip default-jdk default-jre curl apache2
 
-cd /opt
-
-if [ ! -f adito-0.9.1-bin.tar.gz ] ; then
- curl -L -o adito-0.9.1-bin.tar.gz http://sourceforge.net/projects/openvpn-als/files/adito/adito-0.9.1/adito-0.9.1-bin.tar.gz/download
- tar -zxvf adito-0.9.1-bin.tar.gz
+if [ ! -f /opt/adito-0.9.1-bin.tar.gz ] ; then
+ curl -L -o /opt/adito-0.9.1-bin.tar.gz http://sourceforge.net/projects/openvpn-als/files/adito/adito-0.9.1/adito-0.9.1-bin.tar.gz/download
+ ( cd /opt && tar -zxvf /opt/adito-0.9.1-bin.tar.gz )
 fi
 
-test -d adito-0.9.1 || exit 1
+test -d /opt/adito-0.9.1 || exit 1
 
 # redirect 80 to 28080 during initial config
 cat <<EOF > /etc/apache2/sites-available/adito.conf
@@ -46,7 +44,7 @@ a2ensite adito
 update-rc.d apache2 enable
 service apache2 restart
 
-cd adito-0.9.1
+cd /opt/adito-0.9.1
 install_dir=$(pwd)
 ant install && \
 a2dissite adito && \
