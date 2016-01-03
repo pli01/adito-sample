@@ -18,3 +18,8 @@ Tips to allow adito-agent on MacOs Client
  - active Debug in Profile Menu/Default/Configure/Adito Agent/Debug
  - create ssh tunnel over https: Create Tunnel/Source Interface/Port (localhost:2323) Destination Host/Port (privateip/22)
 
+
+Docs:
+https://wiki.amahi.org/index.php/Adito_notes
+http://www.anonyproz.com/stealth-ssh.pdf
+http://lars.werner.no/?page_id=153
