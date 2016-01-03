@@ -14,6 +14,7 @@ Step:
  - finally connect on your https://publicIP and use adito
 
 Tips to allow adito-agent on MacOs Client
- - allow self certificat (https://publicIP)
- - active Debug mon in Profile Menu/Tunnel
+ - java preferences: allow self certificate (url https://publicIP)
+ - active Debug in Profile Menu/Default/Configure/Adito Agent/Debug
+ - create ssh tunnel over https: Create Tunnel/Source Interface/Port (localhost:2323) Destination Host/Port (privateip/22)
 
