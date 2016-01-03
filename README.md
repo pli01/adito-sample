@@ -19,9 +19,7 @@ Tips to allow adito-agent on MacOs Client
  - create ssh tunnel over https: Create Tunnel/Source Interface/Port (localhost:2323) Destination Host/Port (privateip/22)
 
 Install:
-‘‘‘
-wget -q -O - https://raw.githubusercontent.com/pli01/adito-sample/master/install.sh  |bash -x
-‘‘‘
+ - wget -q -O - https://raw.githubusercontent.com/pli01/adito-sample/master/install.sh  |bash -x
 
 Docs:
  - https://wiki.amahi.org/index.php/Adito_notes
