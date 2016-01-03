@@ -41,6 +41,7 @@ cat <<EOF > /etc/apache2/sites-available/adito.conf
 EOF
 
 a2dissite 000-default
+a2dissite default-ssl
 a2ensite adito
 update-rc.d apache2 enable
 service apache2 restart
