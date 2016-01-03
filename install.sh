@@ -8,7 +8,7 @@
 test -f /opt/adito-0.9.1/conf/wrapper.conf && exit 0
 test -d /opt/adito-0.9.1 && exit 0
 
-apt-get install ant zip unzip default-jdk default-jre curl
+apt-get install ant zip unzip default-jdk default-jre curl apache2
 
 cd /opt
 
@@ -55,6 +55,7 @@ update-rc.d apache2 disable && \
 ant create-wrapper-conf && \
 sed -i.bak -e "s|^wrapper.working.dir=.*|wrapper.working.dir=$install_dir|" conf/wrapper.conf && \
 sed -i.bak -e "s|^wrapper.java.library.path.1=install/platforms/linux/x86$|wrapper.java.library.path.1=install/platforms/linux/x86-64|" conf/wrapper.conf && \
+sed -i.bak -e "s|^wrapper.java.additional.2=.*|wrapper.java.additional.2=-Dfile.encoding=UTF-8|" conf/wrapper.conf && \
 ant install-service && \
 /etc/init.d/adito start
 
