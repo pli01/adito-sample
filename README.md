@@ -27,3 +27,5 @@ Docs:
  - https://wiki.amahi.org/index.php/Adito_notes
  - http://www.anonyproz.com/stealth-ssh.pdf
  - http://lars.werner.no/?page_id=153
+ - http://lars.werner.no/?p=1159
+ - https://infologs.wordpress.com/2015/10/13/openvpn-als-adito-ssl-vpn-ssl_error_weak_server_ephemeral_dh_key-fix/
